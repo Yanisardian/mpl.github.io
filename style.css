@@ -17,6 +17,11 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigasi */
+nav {
+    position: relative;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -41,6 +46,48 @@ nav ul li a:hover {
     color: #2e7d32;
     border-radius: 5px;
 }
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #2e7d32;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
 
 .hero {
     text-align: center;
@@ -89,7 +136,7 @@ footer {
     width: 70px; /* Sesuaikan ukuran logo */
     height: auto;
     vertical-align: middle; /* Sejajarkan dengan teks */
-    margin-right: 10px; /* Beri jarak antara logo dan teks */
+    margin-right: 0px; /* Beri jarak antara logo dan teks */
 }
 
 .blog {
