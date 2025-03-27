@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("show");
+    }
+</script>
+
 <body>
 
     <!-- Header -->
     <header>
         <div class="title-container">
-            <img src="foto dikjut 2025/logo.png" alt="Logo" class="logo">
-            <h1>Mahasiswa Peduli Lingkungan <br> Universitas Hamzanwadi</h1>
+            <h1>Mahasiswa Peduli Lingkungan Universitas Hamzanwadi</h1>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="index.html" class="active">Beranda</a></li>
                 <li><a href="blog.html">Blog Berita</a></li>
                 <li><a href="galeri.html">Galeri Foto</a></li>
@@ -25,6 +32,7 @@
             </ul>
         </nav>
     </header>
+    
 
     <!-- Hero Section -->
     <section class="hero">
@@ -43,7 +51,7 @@
                 <img src="foto dikjut 2025/relawan.jpeg" alt="Gerakan Bersih Pantai">
                 <h3>Gerakan Bersih Pantai</h3>
                 <p>Kami baru saja mengadakan aksi bersih pantai di Lombok bersama relawan. Yuk, baca lebih lanjut!</p>
-                <a href="blog.html" class="btn">Baca Selengkapnya</a>
+                <a href="https://megapolitan.antaranews.com/berita/326774/pandawara-bersihkan-10-ton-sampah-pantai-tanjung-luar-di-lombok-timur" class="btn">Baca Selengkapnya</a>
             </article>
     </section>
     

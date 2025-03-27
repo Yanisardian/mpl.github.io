@@ -7,25 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
+</head>
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("show");
+    }
+</script>
+
 <body>
 
     <!-- Header -->
     <header>
         <div class="title-container">
-            <img src="foto dikjut 2025/logo.png" alt="Logo" class="logo">
             <h1>Mahasiswa Peduli Lingkungan Universitas Hamzanwadi</h1>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Beranda</a></li>
                 <li><a href="blog.html">Blog Berita</a></li>
                 <li><a href="galeri.html">Galeri Foto</a></li>
                 <li><a href="tentang.html">Tentang Kami</a></li>
-                <li><a href="kontak.html" class="active">Kontak</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <!-- Bagian Kontak -->
     <main>
         <section class="contact">
