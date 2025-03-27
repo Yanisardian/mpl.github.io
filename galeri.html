@@ -3,18 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Foto - Mahasiswa Peduli Lingkungan</title>
+    <title>Galeri Kegiatan - Mahasiswa Peduli Lingkungan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
-</head>
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector(".nav-menu");
-        menu.classList.toggle("show");
-    }
-</script>
-
 <body>
 
     <!-- Header -->
@@ -25,35 +17,61 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="index.html">Beranda</a></li>
                 <li><a href="blog.html">Blog Berita</a></li>
-                <li><a href="galeri.html">Galeri Foto</a></li>
+                <li><a href="galeri.html" class="active">Galeri Foto</a></li>
                 <li><a href="tentang.html">Tentang Kami</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
     </header>
-    
 
+    <!-- Galeri Foto -->
     <section class="galeri">
         <h2>Pendidikan Lanjutan 2025</h2>
         <div class="foto-grid">
-            <img src="foto dikjut 2025/a.jpg" alt="Pendidikan Lanjut 2025">
-            <img src="foto dikjut 2025/d.jpg" alt="Menanam Pohon">
-            <img src="foto dikjut 2025/c.jpg" alt="Menanam Pohon">
+            <img src="foto dikjut 2025/g.jpg" alt="Pendidikan Lanjut 2025">
+            <img src="foto dikjut 2025/a.jpg" alt="Menanam Pohon">
             <img src="foto dikjut 2025/b.jpg" alt="Menanam Pohon">
+            <img src="foto dikjut 2025/c.jpg" alt="Menanam Pohon">
+            <img src="foto dikjut 2025/d.jpg" alt="Diskusi Alam">
+            <img src="foto_kegiatan/h.jpg" alt="Aksi Sosial">
         </div>
 
         <h2>Pendidikan Dasar 2024</h2>
         <div class="foto-grid">
             <img src="foto dikjut 2025/e.jpg" alt="Pendidikan Dasar 2024">
             <img src="foto dikjut 2025/f.jpg" alt="Menanam Pohon">
+            <img src="foto_kegiatan/i.jpg" alt="Kegiatan Lingkungan">
+            <img src="foto_kegiatan/j.jpg" alt="Bersih Pantai">
+        </div>
+    </section>
+
+    <!-- Video Kegiatan -->
+    <section class="video-kegiatan">
+        <h2>Dokumentasi Video</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="foto dikjut 2025/vidio 1.mp4" type="video/mp4">
+                Browser Anda tidak mendukung pemutar video.
+            </video>
+            <video controls>
+                <source src="foto dikjut 2025/vidio 2.mp4" type="video/mp4">
+                Browser Anda tidak mendukung pemutar video.
+            </video>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Mahasiswa Peduli Lingkungan</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".nav-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 
 </body>
 </html>

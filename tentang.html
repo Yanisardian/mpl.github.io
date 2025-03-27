@@ -57,7 +57,57 @@
                 
             </ul>
         </div>
-    </section>    
+    </section>  
+    <section>
+
+        <section class="divisi-container">
+            <h2>Kegiatan Divisi</h2>
+            <div class="divisi-grid">
+                <div class="divisi">
+                    <a href="hutan_gunung.html">
+                        <img src="foto dikjut 2025/logo hutan gunung.webp" alt="Divisi Hutan Gunung">
+                    </a>
+                </div>
+                <div class="divisi">
+                    <a href="konservasi_lingkungan.html">
+                        <img src="foto dikjut 2025/klh.webp" alt="Divisi Konservasi Lingkungan">
+                    </a>
+                </div>
+                <div class="divisi">
+                    <a href="jurnalistik.html">
+                        <img src="foto dikjut 2025/jurnalistik.webp" alt="Divisi Jurnalistik">
+                    </a>
+                </div>
+                <div class="divisi">
+                    <a href="rock_climbing.html">
+                        <img src="foto dikjut 2025/logo rc.webp" alt="Divisi Rock Climbing">
+                    </a>
+                </div>
+            </div>
+            <div id="infoDivisi" class="info-box">
+                <p id="divisiText">Klik salah satu divisi untuk melihat kegiatannya.</p>
+            </div>
+        </section>
+        
+       
+    
+        <script>
+            function showInfo(divisi) {
+                let text = "";
+                if (divisi === "divisi1") {
+                    text = "Divisi Hutan Gunung:Divisi Hutan Gunung biasanya berfokus pada kegiatan seperti konservasi alam, pendakian, pemetaan ekosistem, dan edukasi lingkungan";
+                } else if (divisi === "divisi2") {
+                    text = "Divisi Konservasi: Melakukan reboisasi, pembersihan sampah, dan penelitian keanekaragaman hayati.";
+                } else if (divisi === "divisi3") {
+                    text = "Divisi Jurnalistik: Mendokumentasikan kegiatan dan mengelola media sosial serta berita lingkungan.";
+                } else if (divisi === "divisi4") {
+                    text = "Divisi Rock climbing: kegiatan panjat tebing dengan elemen seperti tebing curam dan pendaki. ";
+                }
+                document.getElementById("divisiText").innerText = text;
+            }
+        </script>
+    
+    </section>  
     
 
     <section class="tim">

@@ -607,3 +607,129 @@ h2 {
     max-width: 900px;
 }
 
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background: #2E7D32;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+
+/* Galeri Foto */
+.galeri {
+    padding: 20px;
+    text-align: center;
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.foto-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.foto-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Kegiatan */
+.video-kegiatan {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+video {
+    width: 45%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    video {
+        width: 90%;
+    }
+}
+
+.divisi-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.divisi-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.divisi {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.divisi img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.divisi:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #28a745;
+    display: inline-block;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
