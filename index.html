@@ -43,19 +43,54 @@
         </div>
     </section>
 
-    <!-- Berita Terbaru -->
     <section class="latest-news">
-        <h2>Berita Terbaru</h2>
-        <div class="news-container">
-            <article class="news-item">
-                <img src="foto dikjut 2025/relawan.jpeg" alt="Gerakan Bersih Pantai">
-                <h3>Gerakan Bersih Pantai</h3>
-                <p>Kami baru saja mengadakan aksi bersih pantai di Lombok bersama relawan. Yuk, baca lebih lanjut!</p>
-                <a href="https://megapolitan.antaranews.com/berita/326774/pandawara-bersihkan-10-ton-sampah-pantai-tanjung-luar-di-lombok-timur" class="btn">Baca Selengkapnya</a>
-            </article>
+        <h2>Berita Terbaru </h2>
+    
+        <!-- Container Scroll -->
+        <div class="news-container" id="newsContainer">
+            <div class="news-wrapper">
+                <article class="news-item">
+                    <img src="foto dikjut 2025/relawan.jpeg" alt="Aksi Bersih Pantai">
+                    <h3>Aksi Bersih Pantai</h3>
+                    <p>Relawan membersihkan pantai dari sampah plastik.</p>
+                    <a href="#" class="btn">Baca Selengkapnya</a>
+                </article>
+    
+                <article class="news-item">
+                    <img src="foto dikjut 2025/ketum.jpg" alt="Penanaman 1000 Pohon">
+                    <h3>Ketua umum Terpilih 2025</h3>
+                    <p>Selamat dan sukses atas terpilihnya</p>
+                    <a href="#" class="btn">Baca Selengkapnya</a>
+                </article>
+    
+                <article class="news-item">
+                    <img src="foto dikjut 2025/logo hutan gunung.webp" alt="Reboisasi Hutan">
+                    <h3>Reboisasi Hutan Gunung</h3>
+                    <p>Kelompok pencinta alam melakukan reboisasi.</p>
+                    <a href="#" class="btn">Baca Selengkapnya</a>
+                </article>
+    
+                <article class="news-item">
+                    <img src="foto dikjut 2025/klh.webp" alt="Konservasi Mangrove">
+                    <h3>Konservasi Mangrove</h3>
+                    <p>Kegiatan konservasi untuk melindungi ekosistem pesisir.</p>
+                    <a href="#" class="btn">Baca Selengkapnya</a>
+                </article>
+    
+                <article class="news-item">
+                    <img src="foto dikjut 2025/hari bumi.jpg" alt="Edukasi Lingkungan">
+                    <h3>Selamat Hari Hutan</h3>
+                    <p>Dengan memperingati Hari Hutan Internasional semoga kita lebih bijak dalam menggunakan hutan..</p>
+                    <a href="#" class="btn">Baca Selengkapnya</a>
+                </article>
+            </div>
+        </div>
+    
+        <!-- Tombol Navigasi -->
+        <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
+        <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
     </section>
     
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Mahasiswa Peduli Lingkungan Universitas Hamzanwadi. Semua Hak Dilindungi.</p>
@@ -63,6 +98,43 @@
             <a href="#"><img src="foto dikjut 2025/logo.png" alt="mpl"></a>
         </div>
     </footer>
+
+    <!-- Script Dipindahkan ke Akhir -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newsContainer = document.getElementById("newsContainer");
+
+            function scrollLeft() {
+                newsContainer.scrollBy({ left: -300, behavior: "smooth" });
+            }
+
+            function scrollRight() {
+                newsContainer.scrollBy({ left: 300, behavior: "smooth" });
+            }
+
+            // Tambahkan event listener pada tombol
+            document.querySelector(".scroll-btn.left").addEventListener("click", scrollLeft);
+            document.querySelector(".scroll-btn.right").addEventListener("click", scrollRight);
+
+            // Swipe support untuk HP
+            let startX;
+
+            newsContainer.addEventListener("touchstart", (e) => {
+                startX = e.touches[0].clientX;
+            });
+
+            newsContainer.addEventListener("touchmove", (e) => {
+                let moveX = e.touches[0].clientX;
+                let diff = startX - moveX;
+                
+                if (diff > 50) {
+                    scrollRight();
+                } else if (diff < -50) {
+                    scrollLeft();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

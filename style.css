@@ -133,41 +133,7 @@ nav {
     background: #e68900;
 }
 
-/* Berita Terbaru */
-.latest-news {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
 
-.news-container {
-    display: flex;
-    justify-content: center;
-}
-
-.news-item {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 300px;
-}
-
-.news-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.news-item h3 {
-    margin: 10px 0;
-}
-
-.news-item p {
-    font-size: 16px;
-    color: #666;
-}
 
 /* Footer */
 footer {
@@ -539,25 +505,54 @@ h2 {
 
 .latest-news {
     background: url('foto dikjut 2025/1.jpg') no-repeat center center/cover;
-    padding: 70px 20px;
+    padding: 50px 20px;
     color: rgba(14, 13, 13);
     text-align: center;
-    box-shadow: 0 4px 8px rgba(240, 145, 3, 0.322);
+    position: relative;
+    overflow: hidden; /* Hindari overflow yang mengganggu */
 }
 
 .news-container {
     display: flex;
-    justify-content: center;
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
+    scroll-snap-type: x mandatory; /* Membantu scrolling lebih mulus */
     gap: 20px;
-    flex-wrap: wrap;
+    padding: 10px;
+    white-space: nowrap; /* Mencegah item turun ke bawah */
+}
+
+.news-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .news-item {
-    background: rgba(211, 211, 211, 0.6);
-    padding: 20px;
+    flex: 0 0 auto; /* Mencegah item mengecil */
+    width: 80vw; /* Ukuran lebar untuk HP */
+    max-width: 300px; /* Batas maksimal agar tidak terlalu besar */
+    scroll-snap-align: start; /* Memastikan item berhenti dengan rapi */
+}
+
+
+.news-container::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar di Chrome & Safari */
+}
+
+.news-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content; /* Pastikan lebar mengikuti isi kontennya */
+}
+
+.news-item {
+    background: rgba(211, 211, 211, 0.8);
+    padding: 15px;
     border-radius: 10px;
-    width: 300px;
+    width: 280px;
     text-align: left;
+    display: inline-block;
+    white-space: normal;
+    transition: transform 0.3s ease-in-out;
 }
 
 .news-item img {
@@ -567,17 +562,17 @@ h2 {
 
 .news-item h3 {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .news-item p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 8px 12px;
     background: #4CAF50;
     color: white;
     text-decoration: none;
@@ -588,16 +583,47 @@ h2 {
     background: #45a049;
 }
 
-/* Background khusus untuk halaman Tentang Kami */
-.tentang {
-    background: url('foto dikjut 2025/1.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 50px 20px;
-    color: rgba(9, 10, 9);
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(240, 145, 3, 0.322);
+/* Tombol Navigasi */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(76, 175, 80, 0.8);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    display: block;
 }
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+/* Tombol hanya tampil di layar besar (Laptop/PC) */
+@media screen and (max-width: 768px) {
+    .scroll-btn {
+        display: none;
+    }
+}
+
+
+    .news-item {
+        width: 250px;
+    }
+
+    .scroll-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+
 
 /* Tambahkan efek transparan agar teks lebih mudah dibaca */
 .tentang .content {
