@@ -8,6 +8,46 @@
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 </head>
+<style>
+    body {
+    background: url('foto dikjut 2025/1.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.tentang {
+    background: url('foto dikjut 2025/1.jpg') no-repeat center center fixed; 
+    padding: 50px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk bagian "Tim Kami" */
+
+
+/* Efek hover pada anggota tim */
+.tim .anggota img {
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.tim .anggota img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+    .tentang, .tim {
+        width: 95%;
+        padding: 30px;
+    }
+}
+
+
+</style>
 <script>
     function toggleMenu() {
         const menu = document.querySelector(".nav-menu");
